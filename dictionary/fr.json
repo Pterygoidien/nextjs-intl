@@ -24,5 +24,8 @@
     },
     "index": {
         "welcome": "Bienvenue sur Médimooc"
+    },
+    "courses": {
+        "browse": "Parcourir nos cours"
     }
 }

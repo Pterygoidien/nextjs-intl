@@ -26,7 +26,7 @@ export default function RootLayout({ children, params }:
 
             <body className="dark:bg-black dark:text-white">
                 <header className="border-b-4 p-4 flex justify-between sticky dark:text-white">
-                    <Link href="./" tw={undefined}><h1>{t('website')}</h1></Link>
+                    <Link href="/" tw={undefined}><h1>{t('website')}</h1></Link>
                     <nav>
                         <ul className="flex gap-2">
                             <li><Link href="/" tw={undefined}>{t('login')}</Link></li>

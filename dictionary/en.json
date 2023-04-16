@@ -24,5 +24,8 @@
     },
     "index": {
         "welcome": "Welcome to Medicourse"
+    },
+    "courses": {
+        "browse": "Browse courses"
     }
 }

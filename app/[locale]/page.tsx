@@ -9,7 +9,7 @@ export default function Home() {
             <Section title={t('welcome')}>
                 <p>Hello darkness my old friend</p>
             </Section>
-            <Section className="bg-slate-800 p-4">
+            <Section className="bg-slate-200 dark:bg-slate-800 p-4">
                 <p>Je suis le contenu de la section</p>
                 <p>
                     <Link href="/courses" tw={undefined}>Voir les cours</Link>

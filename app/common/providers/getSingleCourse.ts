@@ -8,11 +8,20 @@ const getCourseWithId = async (id: string) => {
 }
 
 const getCourseWithURL = async (slug: string) => {
-    return prisma.course.findUnique({
-        where: {
-            urlPath: slug
-        }
-    })
+    return prisma.course.findUnique(
+        {
+            where: {
+                urlPath: slug
+            },
+            include: {
+                sections: {
+                    include: {
+                        chapters: true
+                    },
+                },
+            }
+        })
+
 }
 
 export { getCourseWithId, getCourseWithURL }
