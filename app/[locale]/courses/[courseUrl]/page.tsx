@@ -22,7 +22,6 @@ export default async function CourseViewer({ params }: { params: { courseUrl: st
             </Section>
         </main>)
 
-    console.log(courses)
 
     return (
         <main>

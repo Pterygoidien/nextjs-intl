@@ -23,5 +23,13 @@ const getCourseWithURL = async (slug: string) => {
         })
 
 }
+const getChaptersFromSection = async (sectionId: string) => {
+    return prisma.section.findUnique({
+        where: {
+            id: sectionId
+        }
+    })
+}
 
-export { getCourseWithId, getCourseWithURL }
+
+export { getCourseWithId, getCourseWithURL, getChaptersFromSection }
