@@ -1,0 +1,28 @@
+{
+    "common": {
+        "website": "Medicourse",
+        "home": "Home",
+        "about": "about",
+        "contact": "Contact",
+        "search": "Rechercher",
+        "search_placeholder": "Rechercher un cours",
+        "search_results": "Résultats de la recherche",
+        "login": "sign in",
+        "logout": "sign out",
+        "register": "sign up"
+    },
+    "header": {
+        "login": "Sign in",
+        "logout": "Sign out",
+        "register": "Sign up"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "terms": "Terms",
+        "privacy": "Privacy"
+    },
+    "index": {
+        "welcome": "Welcome to Medicourse"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "common": {
+        "website": "Médimooc",
+        "home": "Accueil",
+        "about": "À propos",
+        "contact": "Contact",
+        "search": "Rechercher",
+        "search_placeholder": "Rechercher un cours",
+        "search_results": "Résultats de la recherche",
+        "login": "connexion",
+        "logout": "déconnexion",
+        "register": "inscription"
+    },
+    "header": {
+        "login": "connexion",
+        "logout": "déconnexion",
+        "register": "inscription"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "terms": "Terms",
+        "privacy": "Privacy"
+    },
+    "index": {
+        "welcome": "Bienvenue sur Médimooc"
+    }
+}
