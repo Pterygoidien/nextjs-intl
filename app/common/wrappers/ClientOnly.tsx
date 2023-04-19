@@ -1,14 +1,12 @@
 'use client';
 
-import { NextIntlClientProvider } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 
 interface ClientOnlyProps {
     children: React.ReactNode,
-    locale: string
 }
 const ClientOnly: React.FC<ClientOnlyProps> = ({
-    children, locale
+    children
 }) => {
     const [hasMounted, setHasMounted] = useState(false);
 
@@ -19,11 +17,11 @@ const ClientOnly: React.FC<ClientOnlyProps> = ({
     if (!hasMounted) return null;
 
     return (
+        <>
 
-        <NextIntlClientProvider locale={locale}>
             {children}
-        </NextIntlClientProvider>
 
+        </>
     );
 };
 

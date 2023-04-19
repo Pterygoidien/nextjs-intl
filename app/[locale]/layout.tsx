@@ -23,13 +23,11 @@ export default async function RootLayout({ children, params }:
 
     return (
         <html lang={locale}>
-
-
             <body className="dark:bg-black dark:text-white">
                 <header className="border-b-4 p-4 flex justify-between sticky dark:text-white">
                     <Link href="/" tw={undefined}><h1>{t('website')}</h1></Link>
-                    <ClientOnly locale={locale}>
-                        <UserMenu currentUser={currentUser} />
+                    <ClientOnly>
+                        <UserMenu currentUser={currentUser} dic={{ login: t('login'), register: t('register') }} />
                     </ClientOnly>
                 </header>
 
