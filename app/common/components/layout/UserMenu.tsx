@@ -1,6 +1,6 @@
 'use client'
 
-import { Link } from "next-intl";
+import { Link, useTranslations } from "next-intl";
 
 
 interface UserMenuProps {
@@ -10,12 +10,14 @@ interface UserMenuProps {
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
 
+    const t = useTranslations('common')
+
 
     return (
         <nav>
             <ul className="flex gap-2">
-                <li><Link href="/" tw={undefined}>login</Link></li>
-                <li><Link href="/" tw={undefined}>register</Link></li>
+                <li><Link href="/" tw={undefined}>{t('login')}</Link></li>
+                <li><Link href="/" tw={undefined}>{t('logout')}</Link></li>
             </ul>
         </nav>
     )
