@@ -10,10 +10,10 @@ async function getData() {
     return data;
 }
 
-
 export default async function Courses() {
     const t = await getTranslations('courses');
     const courses: any = await getData();
+
     return (
         <main className="dark:bg-slate-900">
             <Section className="bg-slate-100 dark:bg-slate-900" title={t('browse')}>

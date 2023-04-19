@@ -17,6 +17,58 @@ enum Access {
   PRIVATE
 }
 
+enum Language {
+  ENGLISH
+  FRENCH
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String?   @unique
+  password      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  emailVerified DateTime?
+  Profile       Profile?
+  roles         Role[]
+  account       Account[]
+}
+
+model Profile {
+  id        String   @id @default(uuid())
+  firstName String
+  lastName  String
+  location  String
+  language  Language @default(FRENCH)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String   @unique
+}
+
+model Account {
+  id                 String   @id @default(uuid())
+  userId             String
+  user               User     @relation(fields: [userId], references: [id])
+  type               String
+  provider           String
+  providerAccountId  String
+  refreshToken       String
+  accessToken        String
+  accessTokenExpires DateTime
+  tokenType          String
+  scope              String
+  idToken            String
+  sessionState       String
+
+  @@unique([provider, providerAccountId])
+}
+
 model Course {
   id          String    @id @default(uuid())
   name        String
