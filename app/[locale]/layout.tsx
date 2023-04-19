@@ -7,6 +7,8 @@ import "../global.css"
 import { getCurrentUser } from '../common/providers/getCurrentUser';
 import UserMenu from '../common/components/layout/UserMenu';
 import ClientOnly from '../common/wrappers/ClientOnly';
+import Modal from '../common/components/modals/Modal';
+
 
 export default async function RootLayout({ children, params }:
     {
@@ -24,6 +26,8 @@ export default async function RootLayout({ children, params }:
     return (
         <html lang={locale}>
             <body className="dark:bg-black dark:text-white">
+
+
                 <header className="border-b-4 p-4 flex justify-between sticky dark:text-white">
                     <Link href="/" tw={undefined}><h1>{t('website')}</h1></Link>
                     <ClientOnly>
@@ -31,8 +35,11 @@ export default async function RootLayout({ children, params }:
                     </ClientOnly>
                 </header>
 
+                <main>
 
-                {children}
+                    {children}
+                </main>
+
 
                 <footer>
                     <p>{t('website')}</p>
